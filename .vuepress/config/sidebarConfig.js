@@ -11,6 +11,18 @@ module.exports = {
     "git",
     "idea",
     "vs-code"
+  ],
+  // 插件
+  "/docs/plugins/":[
+    "",
+    "docker"
+  ],
+  // 前端
+  "/docs/front-end/":[
+    "",
+    "vue",
+    "react",
+    "angular"
   ]
 }
 

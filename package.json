@@ -10,5 +10,8 @@
     "vuepress": "1.8.2",
     "vuepress-theme-reco": "1.6.10"
   },
-  "description": "不忘初心"
+  "description": "不忘初心",
+  "dependencies": {
+    "moment": "^2.29.1"
+  }
 }

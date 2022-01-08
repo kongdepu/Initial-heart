@@ -24,6 +24,16 @@ module.exports = [
     "text": "开发工具",
     "link": "/docs/dev-tool/"
   },
+  // 插件
+  {
+    "text": "插件",
+    "link": "/docs/plugins/"
+  },
+  // 前端
+  {
+    "text": "前端",
+    "link": "/docs/front-end/"
+  },
   {
     "text": "Contact",
     "icon": "reco-message",
