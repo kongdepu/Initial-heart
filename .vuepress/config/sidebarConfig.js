@@ -23,6 +23,10 @@ module.exports = {
     "vue",
     "react",
     "angular"
+  ],
+  // 更多
+  "/docs/more/":[
+    "",
   ]
 }
 

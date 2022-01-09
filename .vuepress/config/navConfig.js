@@ -34,6 +34,11 @@ module.exports = [
     "text": "前端",
     "link": "/docs/front-end/"
   },
+  // 更多
+  {
+    "text": "更多",
+    "link": "/docs/more/"
+  },
   {
     "text": "Contact",
     "icon": "reco-message",
