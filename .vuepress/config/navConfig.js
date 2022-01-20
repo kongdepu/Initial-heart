@@ -34,6 +34,10 @@ module.exports = [
     "text": "前端",
     "link": "/docs/front-end/"
   },
+  {
+    "text": "接本",
+    "link": "/docs/jieben/"
+  },
   // 更多
   {
     "text": "更多",
