@@ -326,3 +326,65 @@ int main(void) {
     }
 }
 ```
+### 输入十个数，选择排序法从小到大输入
+``` c
+#include <stdio.h>
+
+int main()
+{
+    int a[10],i;
+    printf("请输入十个数");
+    for(i=0;i<10;i++){
+        scanf("%d",&a[i]);
+    }
+    sort(a,10);
+
+    printf("由小到大选择排序发输入如下:\n");
+    for(int j = 0; j < 10; j++){
+        printf("%d\n", a[j]);
+    }
+}
+
+void sort(int array[],int n){
+    int i,j,k,t;
+    for(i=0;i<n-1;i++){
+        k=i;
+        for(j=i+1;j<n;j++){
+            if(array[j]<array[k]){
+                k=j;
+            }
+        }
+        t=array[k];
+        array[k]=array[i];
+        array[i]=t;
+    }
+}
+
+```
+### 使用指针变量交换两个变量的值
+``` c
+#include <stdio.h>
+int main()
+{
+    // 定义两个整型变量，两个指针变量。
+    int i,j,*p1,*p2;
+    printf("请输入两个数");
+    scanf("%d%d",&i,&j);
+
+    p1 = &i; // 将指针p1指向i的地址
+    p2 = &j; // 将指针p2指向i的地址
+
+    wags(p1,p2);
+
+    // 输出
+    printf("%d\t%d", i , j);
+
+}
+// 定义两个指针形参
+void wags(int *q1,int *q2){
+    int t;
+    t = *q1;
+    *q1 = *q2;
+    *q2 = t;
+}
+``` 
