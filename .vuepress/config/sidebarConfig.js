@@ -24,9 +24,11 @@ module.exports = {
     "react",
     "angular"
   ],
-  "/docs/jieben/":[
+  // 专接本
+  "/docs/jieben/c/":[
     "",
-    "c",
+    "constant",
+    "programming",
   ],
   // 更多
   "/docs/more/":[

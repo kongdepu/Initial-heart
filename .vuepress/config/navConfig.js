@@ -35,8 +35,14 @@ module.exports = [
     "link": "/docs/front-end/"
   },
   {
-    "text": "接本",
-    "link": "/docs/jieben/"
+    "text": "专接本",
+    "icon": "/docs/jieben/",
+    "items": [
+      {
+        "text": "C语言",
+        "link": "/docs/jieben/c/"
+      }
+    ]
   },
   // 更多
   {
