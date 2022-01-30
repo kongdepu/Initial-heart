@@ -387,4 +387,32 @@ void wags(int *q1,int *q2){
     *q1 = *q2;
     *q2 = t;
 }
-``` 
+```
+### 求二元一次方程的解
+``` c
+#include<stdio.h>
+#include<math.h>
+int main(){
+  int a,b,c;
+  printf("请输入二元一次方程的三个系数");
+  scanf("%d%d%d",&a,&b,&c);
+  double delta,x1,x2;
+  delta=b*b-4*a*c;
+  if(delta>0){
+  	x1=(-b+sqrt(delta))/(2*a);
+  	x2=(-b-sqrt(delta))/(2*a);
+	printf("x1=%f,x2=%f",x1,x2);
+  }
+  else if(delta==0){
+  	x1=(-b)/(2*a);
+  	x2=x1;
+  	printf("x1=%f,x2=%f",x1,x2);
+  }
+
+  else{
+  printf("无解!\n");
+  }
+
+  return 0;
+}
+```
