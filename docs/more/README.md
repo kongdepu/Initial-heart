@@ -39,3 +39,31 @@ async 我是异步方法(data){
         }
       })
 ```
+
+## vue文件初始化
+``` vue
+<template>
+  <div class="index">
+
+  </div>
+</template>
+<script>
+export default {
+  data() {
+    return {
+    };
+  },
+  props: {},
+  watch: {},
+  computed: {},
+  filters: {},
+  components: {},
+  created() {},
+  mounted() {},
+  methods: {},
+};
+</script>
+<style>
+</style>
+
+```
