@@ -377,15 +377,13 @@ void sort(int array[],int n){
 #include <stdio.h>
 int main()
 {
-    // 定义两个整型变量，两个指针变量。
-    int i,j,*p1,*p2;
+    // 定义两个整型变量
+    int i,j;
     printf("请输入两个数");
     scanf("%d%d",&i,&j);
 
-    p1 = &i; // 将指针p1指向i的地址
-    p2 = &j; // 将指针p2指向i的地址
 
-    wags(p1,p2);
+    wags(&i,&j);
 
     // 输出
     printf("%d\t%d", i , j);
@@ -398,6 +396,7 @@ void wags(int *q1,int *q2){
     *q1 = *q2;
     *q2 = t;
 }
+
 ```
 ### 求二元一次方程的解
 ``` c
@@ -426,4 +425,58 @@ int main(){
 
   return 0;
 }
+```
+### 输出图形
+``` c
+   *   
+  ***  
+ *****
+*******
+#include <stdio.h>
+int main()
+{
+    int i,j,k;
+    for(i=1;i<=4;i++){
+        for(j=1;j<=4-i;j++){
+            printf(" ");
+        }
+        for(k=1;k<=i*2-1;k++){
+            printf("*");
+        }
+        for(j=1;j<=4-i;j++){
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+
+```
+### 输出图形
+``` c
+   *
+  ***
+ *****
+*******
+ *****
+  ***
+   *
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int i,j,k;
+    for(i=1;i<=7;i++){
+        for(j=1;j<=abs(4-i);j++){
+            printf(" ");
+        }
+        for(k=1;k<=(i<=4?i*2-1:15-i*2);k++){
+            printf("*");
+        }
+        for(j=1;j<=abs(4-i);j++){
+            printf(" ");
+        }
+        printf("\n");
+    }
+}
+
 ```
