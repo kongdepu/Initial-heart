@@ -40,8 +40,12 @@ module.exports = [
     "items": [
       {
         "text": "C语言",
-        "link": "/docs/jieben/c/"
-      }
+        "link": "/docs/jieben/c/",
+      },
+      {
+        "text": "微机原理",
+        "link": "/docs/jieben/micro-principle/",
+      },
     ]
   },
   // 更多

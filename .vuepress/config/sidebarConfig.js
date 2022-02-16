@@ -30,6 +30,11 @@ module.exports = {
     "constant",
     "programming",
   ],
+  // 微机原理
+  "/docs/jieben/micro-principle/":[
+    "",
+    "brief-answer"
+  ],
   // 更多
   "/docs/more/":[
     "",

@@ -480,3 +480,51 @@ int main()
 }
 
 ```
+### 输入杨辉三角前十行
+``` c
+#include <stdio.h>
+int main()
+{
+    int a[10][10],i,j;
+    for(i = 0; i < 10; i++){
+        for(j = 0; j <= i; j++){
+            if(j == 0 || j == i){
+                a[i][j] = 1;
+            }else{
+                a[i][j] = a[i-1][j-1] + a[i-1][j];
+            }
+        }
+    }
+
+    for(i = 0; i < 10; i++){
+        for(j = 0; j <= i; j++){
+            printf("%d\t", a[i][j]);
+        }
+            printf("\n");
+    }
+}
+
+```
+
+### 实现两个字符串的拼接
+``` c
+#include <stdio.h>
+int main(void) {
+    char s1[80],s2[40];
+    int i=0,j=0;
+    printf("input string s1\n");
+    scanf("%s",s1);
+    printf("input string s2\n");
+    scanf("%s",s2);
+
+    while(s1[i] != '\0')
+        i++;
+
+    while(s2[j] != '\0')
+    {
+        s1[i++] = s2[j++];
+    }
+    printf("new string %s",s1);
+
+}
+```
