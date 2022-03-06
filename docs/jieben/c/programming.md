@@ -528,3 +528,25 @@ int main(void) {
 
 }
 ```
+### 删除字符串中的指定字符
+``` c
+#include<stdio.h>
+void put(char *p,char del_c)
+{
+    char *q = p;
+    for(;*p;p++){
+        if(*p != del_c){
+            *q++=*p;
+        }
+    }
+    *q = 0;
+}
+int main()
+{
+    char str[20],del_c;
+    gets(str);
+    del_c = getchar();
+    put(str,del_c);
+    puts(str);
+}
+```
