@@ -550,3 +550,42 @@ int main()
     puts(str);
 }
 ```
+### 求最大公约数和最小公倍数
+- 
+有整数a和b
+1. a%b = c
+2. c = 0 a是最大公倍数
+3. c != 0 b=b+b 在执行1
+``` c
+#include <stdio.h>
+int main()
+{
+    int m,n,gys,gbs;
+    scanf("%d %d",&m,&n);
+    gbs = m;
+    while(gbs%n != 0) gbs += m;
+    gys = m*n/gbs;
+    printf("最大公约数%d,最大公倍数%d",gys,gbs);
+    return 0;
+}
+```
+- 辗转相除法
+有整数a和b
+1. a%b = c
+2. c = 0 b是最小公约数
+3. c != 0 则 a=b b=c 在执行1
+``` c
+int main()
+{
+    int m,n,gys,gbs,temp;
+    scanf("%d %d",&m,&n);
+    gbs = m; gys = n;
+    while(gys != 0){
+        temp = gbs%gys;
+        gbs = gys;
+        gys = temp;
+    }
+    printf("最大公约数%d,最大公倍数%d",gbs,m*n/gbs);
+    return 0;
+}
+```
