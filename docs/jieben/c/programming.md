@@ -589,3 +589,24 @@ int main()
     return 0;
 }
 ```
+### 是否是完全数
+1+2+4+7+14=28
+``` c
+#include <stdio.h>
+int main()
+{
+    int n,sum = 0,i=1;
+    scanf("%d",&n);
+    while(i<n){
+        if(n%i == 0){
+            sum = sum + i;
+        }
+        i++;
+    }
+    if(sum  == n){
+        printf("是完全数");
+    }
+    printf("%d",sum);
+    return 0;
+}
+```
