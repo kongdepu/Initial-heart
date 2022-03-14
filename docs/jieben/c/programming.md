@@ -290,30 +290,28 @@ int main(void) {
     return 1;
 }
 ```
-### 1-256之间的回文数
+### 数字回文数
 ``` c
 #include <stdio.h>
-int main(void) {
-    int a,t = 1,j,m[20],k = 0;
-    for(int i = 1;i<256;i++){
-        a = i*i;
-        for(j=0;a!=0;j++){
-            m[j] = a%10;
-            a = a/10;
-        }
-        j--;
-        t = 1;
-        k = 0;
-        for(;j>=0;j--){
-            k = k + m[j] * t;
-            t = t*10;
-        }
-        if(k==i*i){
-            printf("%d%10d",i,k);
-            printf("\n");
-        }
+#include <math.h>
+int main()
+{
+    int n,n1,sum=0,s=0;
+    scanf("%d",&n);
+    n1=n;
+    for(;n;n/=10)
+    {
+        s=s*10+n%10;
     }
+    printf("%d %d",n,s);
+    if(n1 == s)
+        puts("yes");
+    else
+        puts("no");
+    return 0;
 }
+
+
 ```
 ### 二维数组对角线为1其他为0
 ``` c
@@ -607,6 +605,49 @@ int main()
         printf("是完全数");
     }
     printf("%d",sum);
+    return 0;
+}
+```
+### 字符串逆序，字符串的比较
+``` c
+#include <stdio.h>
+#include <math.h>
+void fun(char *p)
+{
+    char *q = p,t;
+    while(*p)
+        p++;
+    p--;
+    for(;q<=p;q++,p--){
+        t = *q;
+        *q = *p;
+        *p = t;
+    }
+}
+/* 字符串比较 */
+int mystrcmp(char *s,char *t)
+{
+    while(*s == *t)
+    {
+        if(*s == '\0')return 0;
+        s++;
+        t++;
+    }
+    return (*s-*t);
+}
+int main()
+{
+    char a[80],b[80],*pa,*pb;
+    gets(a);
+    gets(b);
+    fun(a);
+    puts(a);
+    int j = mystrcmp(a,b);
+    if(j > 0){
+        printf("a>b");
+    }else if(j == 0){
+        printf("a==b");
+    }else printf("a<b");
     return 0;
 }
 ```
