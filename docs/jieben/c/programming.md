@@ -651,3 +651,91 @@ int main()
     return 0;
 }
 ```
+### 数组插入
+``` c
+#include <stdio.h>
+#include <math.h> // 数学文件头
+#include <time.h>  // 时间文件头
+#include <stdlib.h> // 随机数文件头
+int main()
+{
+    int a[11],i,j,x,t;
+    scanf("%d",&x);
+    for(i=0;i<10;i++)
+        scanf("%d",&a[i]);
+       // a[i] = rand() % 10;
+    // 排序
+    for(i=0;i<9;i++){
+        for(j=0;j<9-i;j++){
+            if(a[j] > a[j+1]){
+                t = a[j];
+                a[j] = a[j+1];
+                a[j+1] = t;
+            }
+        }
+    }
+
+    // 插入
+    for(i=9;i>=0;i--){
+        if(a[i] > x){
+            a[i+1] = a[i];
+        }else{
+            break;
+        }
+    }
+    a[i+1] = x;
+    for(i=0;i<11;i++)
+        printf("%d ",a[i]);
+    return 0;
+}
+``` 
+### 数组删除
+``` c
+#include <stdio.h>
+#include <math.h> // 数学文件头
+#include <time.h>  // 时间文件头
+#include <stdlib.h> // 随机数文件头
+int main()
+{
+    int a[10],i,j,x;
+    scanf("%d",&x);
+    for(i=0;i<10;i++)
+        scanf("%d",&a[i]);
+
+    for(i=0,j=0;i<10;i++){
+        if(a[i] != x){
+            a[j] = a[i];
+            j++;
+        }
+    }
+
+
+    for(i=0;i<j;i++)
+        printf("%d ",a[i]);
+    return 0;
+}
+``` 
+### 统计字母个数
+``` c
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char a[100];
+    int i=0,count = 0,word=0;
+    gets(a);
+    while(a[i])
+    {
+        if(a[i] == ' ') {
+           word = 0;
+        }
+        else if(word == 0){
+            word=1;count++;
+        }
+        i++;
+    }
+    printf("%d",count);
+    return 0;
+}
+
+```
