@@ -739,3 +739,28 @@ int main()
 }
 
 ```
+### 输入80个字符，统计单词个数，单词用空格隔开
+``` c
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    int kongge = 0,n=0;
+    char str[81],*p;
+    gets(str);
+    p=str;
+    while(*p){
+        if( *p == ' ') {
+            kongge=0;
+        }
+        else if(kongge == 0){
+            n++;
+            kongge = 1;
+        }
+        p++;
+    }
+    printf("%d",n);
+    return 0;
+}
+
+```
