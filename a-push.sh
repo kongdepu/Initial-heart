@@ -3,7 +3,7 @@
 # 确保脚本抛出遇到的错误
 set -e
 
-# 推送
+# 推送@github
 git add .
 git commit -m 'push'
 git push
