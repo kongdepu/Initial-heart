@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-
+echo "正在推送"
 # 确保脚本抛出遇到的错误
 set -e
 
