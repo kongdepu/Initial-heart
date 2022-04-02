@@ -764,3 +764,24 @@ int main()
 }
 
 ```
+### 十进制转任意进制
+``` c
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int n,s,a[20];
+    char k[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
+    scanf("%d",&n);
+    scanf("%d",&s);
+    int i=0,j;
+    while(n){
+        a[i] = n%s;
+        n=n/s;
+        i++;
+    }
+    for(j=i-1;j>=0;j--){
+        printf("%c",k[a[j]]);
+    }
+}
+```
