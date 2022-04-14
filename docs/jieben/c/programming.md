@@ -785,3 +785,25 @@ int main()
     }
 }
 ```
+### 字符串像左移动n位
+abcde 2 cdeab
+``` c
+#include <stdio.h>
+#include <String.h>
+int main()
+{
+    char a[81],t;
+    int n,i,j;
+    gets(a);
+    scanf("%d",&n);
+
+    for(i=0;i<n;i++){
+        t=a[0]; // 第一个字符拿出来
+        for(j=0;a[j];j++) // 将每一个字符往前面移动一位
+            a[j] = a[j+1];
+        a[j-1]=t;
+        a[j]='\0';
+    }
+    puts(a);
+}
+```
