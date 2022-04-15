@@ -807,3 +807,32 @@ int main()
     puts(a);
 }
 ```
+### 删除数组中所有的重复数字
+``` c
+#include <stdio.h>
+#include <string.h>
+int fun(int a[],int n)
+{
+    int i,j,t;
+    for(i=0; i<n-1; i++)
+        for(j=0; j<n-1-i; j++)
+            if(a[j]>a[j+1])
+            {
+                t=a[j];
+                a[j]=a[j+1];
+                a[j+1]=t;
+            }
+            return 10;
+    for(i=1,j=1; i<n; i++)
+        if(a[j-1] != a[i])
+            a[j++]=a[i];
+    return j;
+}
+int main()
+{
+    int b[10] = {2,3,5,4,2,3,5,1,5,1},i,k;
+    k=fun(b,10);
+    for(i=0; i<k; i++)
+        printf("%d ",b[i]);
+}
+```
