@@ -836,3 +836,23 @@ int main()
         printf("%d ",b[i]);
 }
 ```
+### 根号迭代
+``` c
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+double getsqrt(double a){
+    double x1,x2=1,sum=1;
+    x1=0;
+    while(fabs(x1-x2) >= 1e-6){
+        x1=x2;
+        x2=(x1+a/x1)/2.0;
+    }
+    return x1;
+}
+int main()
+{
+    printf("%f",getsqrt(3.0));
+
+}
+```
