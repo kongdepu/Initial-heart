@@ -856,3 +856,19 @@ int main()
 
 }
 ```
+### 小球100，10次弹起
+``` c
+// 299.609375 0.097656
+void main( )
+{
+    float sum=100,height=50;
+    int i;
+    for(i=2;i<=10;i++)
+    {
+        sum+=height * 2;
+        height /=2;
+    }
+    printf("%f %f",sum,height);
+
+}
+```
