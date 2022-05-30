@@ -33,7 +33,13 @@ module.exports = {
   // 微机原理
   "/docs/jieben/micro-principle/":[
     "",
-    "brief-answer"
+    "brief-answer",
+    "chapter-one",
+    "chapter-two",
+    "chapter-three",
+    "chapter-four",
+    "chapter-five",
+    "chapter-six",
   ],
   // 更多
   "/docs/more/":[
