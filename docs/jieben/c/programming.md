@@ -871,4 +871,19 @@ void main( )
     printf("%f %f",sum,height);
 
 }
+### xyz abc打球
+``` c
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+void main()
+{
+    char a,b,c;
+    for(a='x'; a<='z'; a++)
+        for(b='x'; b<='z'; b++)
+            for(c='x'; c<='z'; c++)
+                if( c!='x' && c!='z' && a!='x' && a!=b && a!=c && b!=c)
+                    printf("%c%c%c",a,b,c);
+}
+
 ```
